@@ -15,7 +15,7 @@ public class HerbResource {
 		public HerbServices herbServices = new HerbServices();
 		
 	    @GET
-	    @Produces(MediaType.APPLICATION_XML)
+	    @Produces(MediaType.APPLICATION_JSON)
 	    public List<Herb> getAllHerb() {
 	        return herbServices.getAllHerbs();
 	    }
