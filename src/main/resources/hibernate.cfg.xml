@@ -30,6 +30,7 @@
  
       <!-- <mapping resource="org/azriel/vnuiu/vietherbdb/mapping/herb.hbm.xml"/> --> 
  		<mapping class=   "org.hcmiu.vnu.vietherb.model.Herb"/>
+ 		<mapping class=   "org.hcmiu.vnu.vietherb.model.SingleTerm"/>
  		 
     </session-factory>
 </hibernate-configuration>
