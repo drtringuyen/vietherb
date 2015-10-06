@@ -1,0 +1,27 @@
+@CHARSET "ISO-8859-1";
+
+.Menu
+{
+  font-family : UTM Libel KT;
+  font-size : 42px;
+  color : #FFFFFF;
+  color : rgb(255, 255, 255);
+  background: #000000;
+}
+
+Body
+{
+  font-family : UTM Avo;
+  font-size : 21px;
+  color : #000000;
+}
+
+th {
+padding-left: 20px;
+padding-right: 20px;
+}
+
+td {
+padding-left: 10px;
+border-left: 2px
+}

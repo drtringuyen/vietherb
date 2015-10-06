@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<table id="records_table" align ="center">
+		<tr class="Menu">
+			<th>ID</th>
+			<th>SCIENTIFIC NAME</th>
+			<th>TRIVAL NAMES</th>
+		</tr>
+
+
+		<script>
+			/* 	$.getJSON("http://localhost:14708/vietherb/webapi/herbs",
+						function(data) {
+							console.log("it works!")
+						}); */
+
+			$.ajax({
+				dataType : "json",
+				url : 'http://localhost:14708/vietherb/webapi/herbs',
+				type : 'get',
+				cache : true,
+				success : function(response) {
+
+					var trHTML = '<tr>';
+					$.each(response, function(i, item) {
+
+						trHTML += '<td>' + item.id + '</td><td>'
+								+ item.scientificName + '</td><td>';
+
+						$.each(item.trivalNames, function(j, name) {
+							trHTML += name.content + '<br>';
+						});
+
+						trHTML += '</td></tr>';
+					});
+					$('#records_table').append(trHTML);
+				}
+			});
+		</script>
+	</table>
+</body>
+</html>
